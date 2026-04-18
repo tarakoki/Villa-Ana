@@ -394,7 +394,6 @@ footer p {
   margin-left: 80px;
 }
 
-
 .contact-info {
   max-width: 1200px;
   margin: 0 auto;
@@ -404,13 +403,10 @@ footer p {
 /* ========================= */
 /* HAMBURGER MENU */
 /* ========================= */
-
-/* sakrij checkbox */
 #menu-toggle {
   display: none;
 }
 
-/* hamburger ikona */
 .menu-icon {
   display: none;
   font-size: 28px;
@@ -418,7 +414,6 @@ footer p {
   margin-top: 10px;
 }
 
-/* osnovni nav (desktop ostaje isti) */
 .nav-menu {
   display: flex;
   justify-content: center;
@@ -429,7 +424,9 @@ footer p {
   border-radius: 12px;
 }
 
+/* ========================= */
 /* MOBITEL */
+/* ========================= */
 @media (max-width: 768px) {
 
   .menu-icon {
@@ -442,15 +439,10 @@ footer p {
     align-items: center;
   }
 
-  /* kad klikneš hamburger */
   #menu-toggle:checked + .menu-icon + .nav-menu {
     display: flex;
   }
 }
-
-/* ========================= */
-/* MOBITEL */
-/* ========================= */
 
 @media (max-width: 1024px) {
   .card-grid { grid-template-columns: repeat(2, 1fr); }
@@ -476,5 +468,129 @@ footer p {
 
   footer {
     padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .card-grid {
+    grid-template-columns: 1fr; /* jedna ispod druge */
+    gap: 20px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card-images {
+    flex-direction: column;
+  }
+
+  .card-images img {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .about-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .about-box h2,
+  .about-box h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-box {
+    width: 100%;
+    order: 1;
+    padding: 20px;
+  }
+
+  .about-image {
+    width: 100%;
+    order: 2;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #kontakt {
+    padding: 20px;
+  }
+
+  #kontakt h2,
+  #kontakt p {
+    margin: 0 auto 15px auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    text-align: center;
+  }
+
+  p {
+    margin: 0 auto 15px auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .intro {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .gallery-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .gallery {
+    padding: 0;
+  }
+
+  .image-box {
+    margin: 0;
+  }
+
+  .image-box img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  main {
+    padding: 0 12px;
+  }
+
+  .hero {
+    margin-left: -12px;
+    margin-right: -12px;
   }
 }
