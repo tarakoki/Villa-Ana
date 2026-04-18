@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Villa Ana – Web stranica
 
 ## Opis projekta
