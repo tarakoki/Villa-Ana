@@ -114,7 +114,7 @@ p {
 /* ========================= */
 .hero {
   height: 350px;
-  background: url("images/pozadina.JPG") center/cover;
+  background: url("images/pozadina.jpg") center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
