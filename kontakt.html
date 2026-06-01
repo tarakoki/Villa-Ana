@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="kontakt">
 
 <header>
   <h1>Villa Ana</h1>
@@ -48,52 +48,59 @@
         </div>
     </section>
 
-    <div class="kontakt-uvod"></div>
+    <form class="contact-form" id="contact-form">
+        <h2>Pošaljite upit</h2>
 
-        <h2>Kontakt i upit za rezervaciju</h2>
-        <p>
-            Imate pitanja ili želite rezervirati svoj boravak u Villi Ana? 
-            Slobodno nas kontaktirajte putem obrasca ispod i rado ćemo vam pomoći.
-        </p>
+        <div class="form-row">
+            <input 
+                type="text" 
+                id="name" 
+                placeholder="Ime i prezime (npr. Ivo Ivić)" 
+                required
+            >
 
-        <p>
-            Naš tim će vam se javiti u najkraćem mogućem roku s dostupnim terminima, 
-            dodatnim informacijama i svim detaljima potrebnim za vaš savršen odmor.
-        </p>
+            <input 
+                type="email" 
+                id="email" 
+                placeholder="Email (npr. ivo.ivic@gmail.com)" 
+                required
+            >
+        </div>
 
-        <p>
-            Radujemo se vašem dolasku i želimo vam pružiti ugodan i nezaboravan boravak!
-        </p>
-    </div>
+        <div class="form-row">
+            <input 
+                type="tel" 
+                id="phone" 
+                placeholder="Telefon (npr. +385 91 123 4567)"
+            >
+        </div>
 
-    <div class="contact-grid">
+        <div class="form-row">
+            <input type="date" id="checkin">
 
-        <section>
-            <form class="contact-form">
+            <input 
+                type="number" 
+                id="guests" 
+                placeholder="Broj gostiju" 
+                min="1"
+            >
+        </div>
 
-                <h2>Pošaljite upit</h2>
+        <textarea 
+            id="message" 
+            placeholder="Napišite poruku (npr. Zanimaju me slobodni termini u srpnju...)"
+        ></textarea>
 
-                <div class="form-row">
-                    <input type="text" placeholder="Ime i prezime (npr. Ivo Ivić)" required>
-                    <input type="email" placeholder="Email (npr. ivo.ivic@gmail.com)" required>
-                </div>
+        <div class="form-message form-message--success" hidden>
+            <p>Upit je uspješno poslan. Hvala vam!</p>
+        </div>
 
-                <div class="form-row">
-                    <input type="tel" placeholder="Telefon (npr. +385 91 123 4567)">
-                </div>
+        <div class="form-message form-message--error" hidden>
+            <p></p>
+        </div>
 
-                <div class="form-row">
-                    <input type="date">
-                    <input type="number" placeholder="Broj gostiju" min="1">
-                </div>
-
-                <textarea placeholder="Napišite poruku (npr. Zanimaju me slobodni termini u srpnju...)"></textarea>
-
-                <button type="submit">Pošalji upit</button>
-
-            </form>
-        </section>
-    </div>
+        <button type="submit">Pošalji upit</button>
+    </form>
 
     <section class="contact-info">
 
@@ -147,5 +154,6 @@
   </nav>
   <p>© 2026 Villa Ana</p>
 </footer>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

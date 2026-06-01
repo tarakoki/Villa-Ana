@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Spavaće sobe",
+    "category": "interijer",
+    "description": "Udobne i moderno uređene sobe za miran san i potpuni odmor.",
+    "details": "Spavaće sobe uređene su tako da gostima pruže mir, privatnost i udobnost tijekom cijelog boravka.",
+    "capacity": "Do 15 osoba",
+    "availability": "Dostupno tijekom cijele godine",
+    "images": [
+      "spavaca1.jpg",
+      "spavaca2.jpg",
+      "spavaca3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bazen i dvorište",
+    "category": "eksterijer",
+    "description": "Privatni bazen, ležaljke i prostor za uživanje na otvorenom.",
+    "details": "Dvorište Ville Ana nudi privatni bazen, prostor za sunčanje, druženje i opuštanje u mirnom okruženju.",
+    "capacity": "Privatno korištenje",
+    "availability": "Sezonski",
+    "images": [
+      "dvoriste1.JPG",
+      "dvoriste2.JPG",
+      "dvoriste3.JPG"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Dnevna soba i blagovanje",
+    "category": "interijer",
+    "description": "Prostrana dnevna soba i blagovaonica idealna za obroke, druženje i večernji odmor.",
+    "details": "Dnevni prostor osmišljen je za zajedničko druženje, odmor, gledanje televizije i ugodne obiteljske obroke.",
+    "capacity": "Veći broj gostiju",
+    "availability": "Dostupno tijekom cijele godine",
+    "images": [
+      "blagovaonica1.jpg",
+      "blagovaonica2.jpg",
+      "blagovaonica3.jpg"
+    ]
+  }
+]

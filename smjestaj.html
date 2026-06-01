@@ -15,8 +15,8 @@
  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  
+<body data-page="smjestaj">
+ 
 <header>
     <h1>Villa Ana</h1>
 
@@ -41,36 +41,41 @@
         Villa Ana nudi ugodan smještaj i sadržaje prilagođene opuštanju.
     </p>
 
-    <section class="card-grid">
-        <article class="card">
-            <h2>Spavaće sobe</h2>
-            <p>Udobne i moderno uređene sobe za miran san i potpuni odmor.</p>
-            <div class="card-images">
-                <img src="images/spavaca1.jpg" alt="Spavaća soba">
-                <img src="images/spavaca2.jpg" alt="Spavaća soba">
-                <img src="images/spavaca3.jpg" alt="Spavaća soba">
-            </div>
-        </article>
+    <section class="smjestaj-controls" data-view="list">
+        <input 
+         type="search" 
+         id="search-input" 
+         placeholder="Pretraži smještaj, bazen, sobe..."
+         aria-label="Pretraga smještaja"
+        >
 
-        <article class="card">
-            <h2>Bazen i dvorište</h2>
-            <p>Privatni bazen, ležaljke i prostor za uživanje na otvorenom.</p>
-            <div class="card-images">
-                <img src="images/dvoriste1.JPG" alt="Terasa">
-                <img src="images/dvoriste2.JPG" alt="Terasa">
-                <img src="images/dvoriste3.JPG" alt="Terasa">
-            </div>
-        </article>
+        <div class="filter-bar">
+            <button class="active" data-filter="all" aria-pressed="true">Sve</button>
+            <button data-filter="interijer" aria-pressed="false">Interijer</button>
+            <button data-filter="eksterijer" aria-pressed="false">Eksterijer</button>
+        </div>
+    </section>
 
-        <article class="card">
-            <h2>Dnevna soba blagovanje</h2>
-            <p>Prostrana dnevna soba i blagovaonica idealna za obroke, druženje i večernji odmor.</p>
-            <div class="card-images">
-                <img src="images/blagovaonica1.jpg" alt="Blagovaonica">
-                <img src="images/blagovaonica2.jpg" alt="Dnevna soba">
-                <img src="images/blagovaonica3.jpg" alt="Dnevna soba">
-            </div>
-        </article>
+    <div id="status-loading" class="status-box" hidden>
+        Učitavanje smještaja...
+    </div>
+
+    <div id="status-error" class="status-box status-box--error" hidden>
+        <p></p>
+        <button id="retry-btn" type="button">Pokušaj ponovno</button>
+    </div>
+
+    <div id="status-empty" class="status-box" hidden>
+     Nema rezultata za odabranu pretragu.
+    </div>
+
+    <section id="view-list">
+        <div id="smjestaj-grid" class="card-grid" aria-busy="false"></div>
+    </section>
+
+    <section id="view-detail" class="detail-section" hidden>
+        <button id="back-btn" class="back-btn" type="button">← Povratak</button>
+        <div id="smjestaj-detail-content"></div>
     </section>
 
     <section class="section-small">
@@ -145,5 +150,6 @@
     </nav>
     <p>© 2026 Villa Ana </p>
 </footer>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
